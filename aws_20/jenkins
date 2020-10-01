@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+IMG=jenkins/jenkins:lts
+PORT_1=8080
+PORT_2=50000
+JENKINS_HOME="~/jenkins_home"
+
+# basic setup jenkins
+# docker run -p 8080:$PORT_1 -p 50000:$PORT_2 $IMG
+
+# recommend way to setup jenkins, this will store the jenkins data
+docker run \
+	-p 8080:$PORT_1 -p 50000:$PORT_2 \
+	-v $JENKINS_HOME:/var/jenkins_home \
+	$IMG
+
+

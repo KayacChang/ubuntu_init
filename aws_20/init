@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# update package lists
+sudo apt update
+
+# fetch new versions of package 
+sudo apt upgrade
+
+# do the same job which is done by apt upgrade, but it might remove obsolete package or add new ones
+# sudo apt dist-upgrade
+

@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+# download and install docker
+sudo apt install docker.io
+
+# launch docker
+# sudo systemctl enable --now docker
+
+# disable docker
+# sudo systemctl disable --now docker
+
+# set user privileges
+# sudo usermod -aG docker $USER
+
+# check docker version
+docker --version
+
+# test docker
+docker run hello-world
