@@ -1,6 +1,10 @@
 #!/usr/bin/env sh
 
-IMG=jenkins/jenkins:lts
+BASIC=jenkins/jenkins:lts
+BLUE=jenkinsci/blueocean
+
+IMG=$BLUE
+
 PORT_1=8080
 PORT_2=50000
 JENKINS_HOME="~/jenkins_home"
