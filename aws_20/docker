@@ -9,11 +9,12 @@ sudo apt install docker.io
 # disable docker
 # sudo systemctl disable --now docker
 
-# set user privileges
-# sudo usermod -aG docker $USER
-
 # check docker version
 docker --version
+
+# set user privileges
+sudo chmod 666 /var/run/docker.sock
+sudo usermod -aG docker $USER
 
 # test docker
 docker run hello-world
